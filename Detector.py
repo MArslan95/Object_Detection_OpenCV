@@ -42,7 +42,7 @@ class Detector:
             currentTime = time.time()
             fps = 1/(currentTime-startTime)
             startTime=currentTime
-            classLabelIDs, confidences, bboxs = self.net.detect(image, confThreshold=0.5)
+            classLabelIDs, confidences, bboxs = self.net.detect(image, confThreshold=0.6)
 
             bboxs = list(bboxs)
             confidences = list(np.array(confidences).reshape(1,-1)[0])
